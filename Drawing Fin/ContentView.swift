@@ -10,10 +10,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Circle()
+                .fill(Color.gray)
+            // add border to the sape using overlay and another shape like Circle()
+                .overlay(Circle().stroke(Color.blue, lineWidth: 20))
+                .shadow(radius: 30)
+                .padding(30)
+            
+            
+            Rectangle()
+            
+            Ellipse()
+                .stroke(Color.green,lineWidth: 20) // shape with just the border and inside empty
+            
+            LinesDrawer()
         }
         .padding()
     }
